@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mactabty/feature/home/presentation/Views/Home.dart';
 import 'package:mactabty/feature/splash/presentation/views/splash_view.dart';
 
 void main() {
@@ -13,8 +14,17 @@ class Mactabty extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark().copyWith(),
+      getPages: [
+        GetPage(
+          name: HomeView.id,
+          page: () => const HomeView(),
+          transition: Transition.fadeIn,
+        ),
+        GetPage(name: SplashView.id, page: () => const SplashView()),
+      ],
 
-      home: SplashView(),
+      initialRoute: SplashView.id,
     );
   }
 }
