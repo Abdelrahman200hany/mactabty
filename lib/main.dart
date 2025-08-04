@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mactabty/feature/splash/presentation/views/splash_view.dart';
 
 void main() {
   runApp(const Mactabty());
@@ -10,10 +11,10 @@ class Mactabty extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(debugShowCheckedModeBanner: false,
-    
-     
-     
-     );
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+
+      home: SplashView(),
+    );
   }
 }
