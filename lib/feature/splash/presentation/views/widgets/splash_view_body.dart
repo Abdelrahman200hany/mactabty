@@ -2,6 +2,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mactabty/const.dart';
+import 'package:mactabty/core/utils/assets.dart';
 import 'package:mactabty/feature/home/presentation/Views/Home.dart';
 
 class SplashBody extends StatefulWidget {
@@ -25,9 +26,9 @@ class _SplashBodyState extends State<SplashBody> {
       child: ZoomIn(
         duration: Duration(seconds: 2),
         child: Image.asset(
-          kloge,
-          height: MediaQuery.of(context).size.height * 0.3,
-          width: MediaQuery.of(context).size.width * 0.3,
+          AssetsData.logo,
+          height: MediaQuery.of(context).size.height * 0.5,
+          width: MediaQuery.of(context).size.width * 0.5,
         ),
       ),
     );

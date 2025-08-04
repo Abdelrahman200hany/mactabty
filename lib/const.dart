@@ -1,1 +1,3 @@
-const String kloge='assets/images/Logo.png';
+import 'package:flutter/material.dart';
+
+const  kprimarycolor=Color(0xff100B20);
