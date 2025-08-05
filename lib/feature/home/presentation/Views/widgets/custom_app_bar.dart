@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mactabty/core/utils/assets.dart';
 
 class CostomAppBar extends StatelessWidget {
@@ -7,7 +8,7 @@ class CostomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 3, right: 12, left: 12, bottom: 12),
+      padding: const EdgeInsets.only(top: 3, bottom: 12),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -15,7 +16,11 @@ class CostomAppBar extends StatelessWidget {
 
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.search, color: Colors.white),
+            icon: Icon(
+              FontAwesomeIcons.magnifyingGlass,
+              color: Colors.white,
+              size: 20,
+            ),
           ),
         ],
       ),
