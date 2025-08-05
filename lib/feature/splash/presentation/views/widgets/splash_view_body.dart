@@ -1,7 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mactabty/const.dart';
 import 'package:mactabty/core/utils/assets.dart';
 import 'package:mactabty/feature/home/presentation/Views/Home.dart';
 

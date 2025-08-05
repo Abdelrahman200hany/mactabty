@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+
 import 'package:mactabty/core/utils/styles.dart';
 
 import 'package:mactabty/feature/home/presentation/Views/widgets/cart_list.dart';
 import 'package:mactabty/feature/home/presentation/Views/widgets/custom_app_bar.dart';
+import 'package:mactabty/feature/home/presentation/Views/widgets/text_title.dart';
 
 class HomeBody extends StatelessWidget {
   const HomeBody({super.key});
@@ -11,12 +13,12 @@ class HomeBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24),
+        padding: const EdgeInsets.symmetric(horizontal: 30),
         child: CustomScrollView(
           slivers: [
             SliverToBoxAdapter(child: CostomAppBar()),
             SliverToBoxAdapter(child: CartList()),
-            SliverToBoxAdapter(child: Title(title: 'Best Seller')),
+            SliverToBoxAdapter(child: TextTitle(title: 'Best Seller')),
           ],
         ),
       ),
@@ -24,15 +26,3 @@ class HomeBody extends StatelessWidget {
   }
 }
 
-class Title extends StatelessWidget {
-  const Title({super.key, required this.title});
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 8),
-      child: Text(title, textAlign: TextAlign.left, style: Styles.mediumTitle),
-    );
-  }
-}
