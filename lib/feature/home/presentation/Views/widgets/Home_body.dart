@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:mactabty/core/utils/styles.dart';
-
 import 'package:mactabty/feature/home/presentation/Views/widgets/cart_list.dart';
 import 'package:mactabty/feature/home/presentation/Views/widgets/custom_app_bar.dart';
 import 'package:mactabty/feature/home/presentation/Views/widgets/text_title.dart';
@@ -25,4 +23,3 @@ class HomeBody extends StatelessWidget {
     );
   }
 }
-
