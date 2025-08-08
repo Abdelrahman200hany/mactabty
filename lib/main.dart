@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mactabty/const.dart';
-import 'package:mactabty/feature/home/presentation/Views/Home.dart';
+import 'package:mactabty/feature/home/presentation/Views/home.dart';
 import 'package:mactabty/feature/splash/presentation/views/splash_view.dart';
 
 void main() {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mactabty/core/utils/styles.dart' show Styles;
+import 'package:mactabty/feature/home/presentation/Views/widgets/Best_seller_list.dart';
 import 'package:mactabty/feature/home/presentation/Views/widgets/best_seller_item.dart';
 
 import 'package:mactabty/feature/home/presentation/Views/widgets/cart_list.dart';
@@ -22,10 +23,7 @@ class HomeBody extends StatelessWidget {
             ),
           ),
       
-          SliverToBoxAdapter(child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30),
-            child: BestSellerItem(),
-          )),
+       BestSellerSliverList(),
         ],
       ),
     );
