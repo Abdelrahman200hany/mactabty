@@ -8,7 +8,7 @@ class CostomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 3, bottom: 12),
+      padding: const EdgeInsets.only(top: 3, bottom: 12,right: 30,left:30),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
