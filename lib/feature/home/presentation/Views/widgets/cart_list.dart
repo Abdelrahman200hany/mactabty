@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mactabty/feature/home/presentation/Views/widgets/cart_item.dart';
+import 'package:mactabty/feature/home/presentation/Views/widgets/custom_book_picture.dart';
 
 class CartList extends StatelessWidget {
   const CartList({super.key});
@@ -16,7 +16,7 @@ class CartList extends StatelessWidget {
           itemCount: 10,
           itemBuilder: (context, index) => Padding(
             padding: const EdgeInsets.symmetric(horizontal: 5),
-            child: CartItem(),
+            child: CustomBookpicture(),
           ),
         ),
       ),
