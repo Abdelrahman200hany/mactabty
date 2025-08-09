@@ -49,21 +49,35 @@ class BestSellerItemEvaluate extends StatelessWidget {
             style: Styles.textstyle20.copyWith(fontWeight: FontWeight.w700),
           ),
 
-          Row(
-            children: [
-              Icon(FontAwesomeIcons.solidStar, color: const Color.fromARGB(255, 253, 246, 178)),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 5),
-                child: Text('4.8', style: Styles.textstyle16),
-              ),
-              Text(
-                '(2035)',
-                style: Styles.textstyle14.copyWith(color: Colors.white70),
-              ),
-            ],
-          ),
+          BookRating(),
         ],
       ),
+    );
+  }
+}
+
+class BookRating extends StatelessWidget {
+  const BookRating({
+    super.key,
+    this.mainAxisAlignment = MainAxisAlignment.start,
+  });
+  final MainAxisAlignment mainAxisAlignment;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: mainAxisAlignment,
+      children: [
+        Icon(FontAwesomeIcons.solidStar, color:  Colors.yellow),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 7),
+          child: Text('4.8', style: Styles.textstyle16),
+        ),
+        Text(
+          '(2035)',
+          style: Styles.textstyle14.copyWith(color: Colors.white70),
+        ),
+      ],
     );
   }
 }

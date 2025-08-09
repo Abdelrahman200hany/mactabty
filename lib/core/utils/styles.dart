@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mactabty/const.dart';
 
 abstract class Styles {
 
@@ -21,7 +22,9 @@ abstract class Styles {
  
   static const textstyle30 = TextStyle(
     fontSize: 30,
-    fontWeight: FontWeight.normal,
+    fontWeight: FontWeight.w700,
+    fontFamily: gTSectra,
+    
   );
  
 }
