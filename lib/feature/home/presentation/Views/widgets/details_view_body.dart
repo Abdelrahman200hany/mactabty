@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:mactabty/core/utils/styles.dart';
-
 import 'package:mactabty/feature/home/presentation/Views/widgets/best_seller_item_text.dart';
 import 'package:mactabty/feature/home/presentation/Views/widgets/book_action.dart';
 import 'package:mactabty/feature/home/presentation/Views/widgets/custom_book_picture.dart';
 import 'package:mactabty/feature/home/presentation/Views/widgets/custom_details_appbar.dart';
+import 'package:mactabty/feature/home/presentation/Views/widgets/similar_book_list.dart';
 
 class DetailsBody extends StatelessWidget {
   const DetailsBody({super.key});
@@ -48,6 +48,17 @@ class DetailsBody extends StatelessWidget {
                 child: BookRating(mainAxisAlignment: MainAxisAlignment.center),
               ),
               BookAction(),
+
+              Padding(
+                padding: const EdgeInsets.only(top: 16, bottom: 12),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+
+                  child: Text('you can also like', style: Styles.textstyle18),
+                ),
+              ),
+
+              SimilarBookList(),
             ],
           ),
         ),
