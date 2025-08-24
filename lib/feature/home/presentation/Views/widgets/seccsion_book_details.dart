@@ -4,10 +4,7 @@ import 'package:mactabty/feature/home/presentation/Views/widgets/best_seller_ite
 import 'package:mactabty/feature/home/presentation/Views/widgets/custom_book_picture.dart';
 
 class SecssionBooKDetails extends StatelessWidget {
-  const SecssionBooKDetails({
-    super.key,
-    required this.width,
-  });
+  const SecssionBooKDetails({super.key, required this.width});
 
   final double width;
 
@@ -21,7 +18,7 @@ class SecssionBooKDetails extends StatelessWidget {
           ).copyWith(top: 10),
           child: CustomBookpicture(),
         ),
-        
+
         Padding(
           padding: const EdgeInsets.only(top: 24),
           child: Text('Abdelrahman Hany ', style: Styles.textstyle30),
@@ -32,13 +29,11 @@ class SecssionBooKDetails extends StatelessWidget {
             opacity: 0.8,
             child: Text(
               'sadadfax',
-              style: Styles.textstyle18.copyWith(
-                fontStyle: FontStyle.italic,
-              ),
+              style: Styles.textstyle18.copyWith(fontStyle: FontStyle.italic),
             ),
           ),
         ),
-        
+
         Padding(
           padding: EdgeInsetsGeometry.only(top: 10),
           child: BookRating(mainAxisAlignment: MainAxisAlignment.center),

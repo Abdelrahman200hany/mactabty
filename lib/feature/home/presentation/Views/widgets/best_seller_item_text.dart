@@ -68,7 +68,7 @@ class BookRating extends StatelessWidget {
     return Row(
       mainAxisAlignment: mainAxisAlignment,
       children: [
-        Icon(FontAwesomeIcons.solidStar, color:  Colors.yellow),
+        Icon(FontAwesomeIcons.solidStar, color: Colors.yellow),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 7),
           child: Text('4.8', style: Styles.textstyle16),

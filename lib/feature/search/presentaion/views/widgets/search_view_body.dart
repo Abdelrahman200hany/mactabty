@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mactabty/core/utils/styles.dart';
 
-
 import 'package:mactabty/feature/search/presentaion/views/widgets/custom_search_text_field.dart';
 import 'package:mactabty/feature/search/presentaion/views/widgets/searcg_book_listview.dart';
 
@@ -30,4 +29,3 @@ class SearchViewBody extends StatelessWidget {
     );
   }
 }
-

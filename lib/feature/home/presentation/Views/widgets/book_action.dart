@@ -7,7 +7,7 @@ class BookAction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 37 , horizontal: 8),
+      padding: const EdgeInsets.symmetric(vertical: 37, horizontal: 8),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -23,8 +23,8 @@ class BookAction extends StatelessWidget {
             ),
           ),
 
-           Expanded(
-             child: CustomButtom(
+          Expanded(
+            child: CustomButtom(
               text: 'review',
               textcolor: Colors.white,
               backgroundcolor: const Color(0xffee8262),
@@ -32,8 +32,8 @@ class BookAction extends StatelessWidget {
                 topRight: Radius.circular(12),
                 bottomRight: Radius.circular(12),
               ),
-                       ),
-           ),
+            ),
+          ),
         ],
       ),
     );
