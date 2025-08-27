@@ -44,7 +44,7 @@ class ServerFailure extends Failure {
     Map<String, dynamic> response,
   ) {
     if (statusCode == 400 || statusCode == 401 || statusCode == 403) {
-      return ServerFailure(response['error']['error.message']);
+      return ServerFailure(response['error']['message']);
     } else if (statusCode == 404) {
       return ServerFailure('Your Request Is Not Found');
     } else if (statusCode == 500) {
