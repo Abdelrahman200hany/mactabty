@@ -1,5 +1,5 @@
-import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mactabty/feature/home/data/models/book_moldel/book_moldel.dart';
 import 'package:mactabty/feature/home/data/repos/home_repo_implementaion.dart';
 
@@ -12,7 +12,7 @@ class FetchNewestBookCubit extends Cubit<FetchNewestBookState> {
 
   Future<void> fetchNewestBook() async {
     emit(FetchNewestBookLoading());
-    var result = await homeRepoImpl.feychNewsetBox();
+    var result = await homeRepoImpl.fetchNewsetBox();
 
     result.fold(
       (failure) {
