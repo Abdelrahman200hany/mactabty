@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mactabty/core/utils/styles.dart';
-import 'package:mactabty/feature/home/presentation/Views/widgets/best_seller_item_text.dart';
+import 'package:mactabty/feature/home/presentation/Views/widgets/book_rating.dart';
 import 'package:mactabty/feature/home/presentation/Views/widgets/custom_book_picture.dart';
 
 class SecssionBooKDetails extends StatelessWidget {
@@ -21,7 +21,11 @@ class SecssionBooKDetails extends StatelessWidget {
 
         Padding(
           padding: const EdgeInsets.only(top: 24),
-          child: Text('Abdelrahman Hany ', style: Styles.textstyle30),
+          child: Text(
+            'Abdelrahman Hany ',
+            style: Styles.textstyle30,
+            textAlign: TextAlign.center,
+          ),
         ),
         Padding(
           padding: const EdgeInsets.only(top: 10),

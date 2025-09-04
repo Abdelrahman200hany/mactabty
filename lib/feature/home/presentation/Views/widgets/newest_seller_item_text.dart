@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mactabty/core/utils/styles.dart';
+import 'package:mactabty/feature/home/data/models/book_moldel/book_moldel.dart';
+import 'package:mactabty/feature/home/presentation/Views/widgets/book_rating.dart';
 
-class BestSellerItemText extends StatelessWidget {
-  const BestSellerItemText({super.key});
+class NewestSellerBookText extends StatelessWidget {
+  const NewestSellerBookText({super.key, required this.book});
+  final BookMoldel book;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,7 @@ class BestSellerItemText extends StatelessWidget {
             SizedBox(
               width: MediaQuery.of(context).size.width * 0.5,
               child: Text(
-                'Hurry potter and the and Goblet of file ',
+                book.volumeInfo.authors?[0]?? 'No Name',
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
                 style: Styles.textstyle20.copyWith(fontFamily: 'GTSectra'),
@@ -24,9 +26,9 @@ class BestSellerItemText extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 3),
-              child: Text('Jd pronding  ', style: Styles.textstyle14),
+              child: Text( book.volumeInfo.publisher??'repo', style: Styles.textstyle14),
             ),
-            BestSellerItemEvaluate(),
+            NewsetSellerBookEvaluate(),
           ],
         ),
       ),
@@ -34,8 +36,8 @@ class BestSellerItemText extends StatelessWidget {
   }
 }
 
-class BestSellerItemEvaluate extends StatelessWidget {
-  const BestSellerItemEvaluate({super.key});
+class NewsetSellerBookEvaluate extends StatelessWidget {
+  const NewsetSellerBookEvaluate({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -56,28 +58,3 @@ class BestSellerItemEvaluate extends StatelessWidget {
   }
 }
 
-class BookRating extends StatelessWidget {
-  const BookRating({
-    super.key,
-    this.mainAxisAlignment = MainAxisAlignment.start,
-  });
-  final MainAxisAlignment mainAxisAlignment;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: mainAxisAlignment,
-      children: [
-        Icon(FontAwesomeIcons.solidStar, color: Colors.yellow),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 7),
-          child: Text('4.8', style: Styles.textstyle16),
-        ),
-        Text(
-          '(2035)',
-          style: Styles.textstyle14.copyWith(color: Colors.white70),
-        ),
-      ],
-    );
-  }
-}

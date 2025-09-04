@@ -26,7 +26,7 @@ class Mactabty extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) =>
-              FetchFeatureBookCubit(homeRepoImplObject())..fetchFeatureBox(),
+              FetchFeatureBookCubit(homeRepoImplObject())..fetchFeatureBook(),
         ),
         BlocProvider(
           create: (context) =>

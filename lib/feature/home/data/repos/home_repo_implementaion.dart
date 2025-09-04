@@ -12,10 +12,10 @@ class HomeRepoImpl implements HomeRepo {
   HomeRepoImpl(this.apiServices);
 
   @override
-  Future<Either<Failure, List<BookMoldel>>> fetchFeatureBox() async {
+  Future<Either<Failure, List<BookMoldel>>> fetchFeatureBook() async {
     try {
       Response response = await apiServices.get(
-        endpoint: 'volumes?q=programming&filter=free-ebooks',
+        endpoint: 'volumes?q=subject:Computers&filtering=free-ebooks',
       );
       Map<String, dynamic> data = response.data;
 
@@ -33,10 +33,10 @@ class HomeRepoImpl implements HomeRepo {
   }
 
   @override
-  Future<Either<Failure, List<BookMoldel>>> fetchNewsetBox() async {
+  Future<Either<Failure, List<BookMoldel>>> fetchNewsetBook() async {
     try {
       Response response = await apiServices.get(
-        endpoint: 'volumes?q=programming&filter=free-ebooks&sorting=newest',
+        endpoint: 'volumes?q=programming&sorting=newest',
       );
       Map<String, dynamic> data = response.data;
 

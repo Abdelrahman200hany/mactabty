@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mactabty/feature/home/presentation/Views/widgets/best_seller_item.dart';
+import 'package:mactabty/feature/home/presentation/Views/widgets/Newest_seller_item.dart';
 
 class SearchBookListView extends StatelessWidget {
   const SearchBookListView({super.key});
@@ -12,7 +12,7 @@ class SearchBookListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.only(bottom: 10),
-            child: BestSellerItem(),
+            // child: NewestSellerBookItem(),
           );
         },
       ),
