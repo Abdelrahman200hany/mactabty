@@ -40,7 +40,7 @@ class SecssionBooKDetails extends StatelessWidget {
 
         Padding(
           padding: EdgeInsetsGeometry.only(top: 10),
-          child: BookRating(mainAxisAlignment: MainAxisAlignment.center),
+          child: BookRating(mainAxisAlignment: MainAxisAlignment.center,bookRating: 4.8,),
         ),
       ],
     );

@@ -20,7 +20,7 @@ class NewestSellerBookItem extends StatelessWidget {
         height: 125,
         child: Row(
           children: [
-            CustomBookpicture(),
+            CustomBookpicture(imageurl:  books.volumeInfo.imageLinks?.thumbnail??'',),
             NewestSellerBookText(book: books),
           ],
         ),

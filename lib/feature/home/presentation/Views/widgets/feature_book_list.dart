@@ -15,7 +15,7 @@ class FeatureBookList extends StatelessWidget {
       builder: (context, state) {
         if (state is GetFeatureBookSuccess) {
           return Padding(
-            padding: const EdgeInsets.only(left: 25),
+            padding: const EdgeInsets.only(left: 15),
             child: SizedBox(
               height: MediaQuery.of(context).size.height * 0.3,
               child: ListView.builder(

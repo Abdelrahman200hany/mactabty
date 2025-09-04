@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mactabty/core/utils/styles.dart';
-import 'package:mactabty/feature/home/presentation/Views/widgets/book_action.dart';
+import 'package:mactabty/feature/home/presentation/Views/widgets/book_details_action.dart';
 import 'package:mactabty/feature/home/presentation/Views/widgets/custom_details_appbar.dart';
 import 'package:mactabty/feature/home/presentation/Views/widgets/seccsion_book_details.dart';
 import 'package:mactabty/feature/home/presentation/Views/widgets/similar_book_list.dart';

@@ -18,7 +18,7 @@ class NewestSellerBookText extends StatelessWidget {
             SizedBox(
               width: MediaQuery.of(context).size.width * 0.5,
               child: Text(
-                book.volumeInfo.authors?[0]?? 'No Name',
+                book.volumeInfo.authors?[0] ?? 'No Name',
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
                 style: Styles.textstyle20.copyWith(fontFamily: 'GTSectra'),
@@ -26,9 +26,12 @@ class NewestSellerBookText extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 3),
-              child: Text( book.volumeInfo.publisher??'repo', style: Styles.textstyle14),
+              child: Text(
+                book.volumeInfo.publisher ?? 'repo',
+                style: Styles.textstyle14,
+              ),
             ),
-            NewsetSellerBookEvaluate(),
+            NewsetSellerBookEvaluate(bookRating: book.volumeInfo.averageRating??0,),
           ],
         ),
       ),
@@ -37,8 +40,8 @@ class NewestSellerBookText extends StatelessWidget {
 }
 
 class NewsetSellerBookEvaluate extends StatelessWidget {
-  const NewsetSellerBookEvaluate({super.key});
-
+  const NewsetSellerBookEvaluate({super.key ,   required this .bookRating });
+final num bookRating;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -47,14 +50,13 @@ class NewsetSellerBookEvaluate extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            '108.2 Ep',
+            'Free ',
             style: Styles.textstyle20.copyWith(fontWeight: FontWeight.w700),
           ),
 
-          BookRating(),
+          BookRating(bookRating:bookRating ),
         ],
       ),
     );
   }
 }
-
