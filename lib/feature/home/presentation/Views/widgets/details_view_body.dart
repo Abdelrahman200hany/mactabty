@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:mactabty/core/utils/styles.dart';
+import 'package:mactabty/feature/home/data/models/book_moldel/book_moldel.dart';
 import 'package:mactabty/feature/home/presentation/Views/widgets/book_details_action.dart';
 import 'package:mactabty/feature/home/presentation/Views/widgets/custom_details_appbar.dart';
 import 'package:mactabty/feature/home/presentation/Views/widgets/seccsion_book_details.dart';
 import 'package:mactabty/feature/home/presentation/Views/widgets/similar_book_list.dart';
 
 class DetailsBody extends StatelessWidget {
-  const DetailsBody({super.key});
+  const DetailsBody({super.key, required this.book});
+  final BookMoldel book;
 
   @override
   Widget build(BuildContext context) {
@@ -14,11 +16,11 @@ class DetailsBody extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             children: [
               CustomDetailsAppbar(),
-              SecssionBooKDetails(width: width),
+              SecssionBooKDetails(width: width , book: book),
               BookAction(),
               Expanded(child: const SizedBox(height: 20)),
               Padding(

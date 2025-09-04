@@ -14,13 +14,15 @@ class NewestSellerBookItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Get.toNamed(DetailsView.id);
+        Get.toNamed(DetailsView.id, arguments: books);
       },
       child: SizedBox(
         height: 125,
         child: Row(
           children: [
-            CustomBookpicture(imageurl:  books.volumeInfo.imageLinks?.thumbnail??'',),
+            CustomBookpicture(
+              imageurl: books.volumeInfo.imageLinks?.thumbnail ?? '',
+            ),
             NewestSellerBookText(book: books),
           ],
         ),

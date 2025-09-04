@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:mactabty/feature/home/data/models/book_moldel/book_moldel.dart';
 import 'package:mactabty/feature/home/presentation/Views/widgets/details_view_body.dart';
 
 class DetailsView extends StatelessWidget {
@@ -7,6 +9,7 @@ class DetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DetailsBody();
+    BookMoldel bookdetails = Get.arguments as BookMoldel;
+    return DetailsBody(book: bookdetails);
   }
 }
