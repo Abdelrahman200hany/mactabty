@@ -1,7 +1,7 @@
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mactabty/feature/home/data/repos/home_repo_implementaion.dart';
-import 'package:mactabty/feature/home/presentation/manager/fetch_feature_book_cubit/fetch_featured_state.dart';
+import 'package:mactabty/feature/home/presentation/manager/fetch_feature_books_cubit/fetch_featured_state.dart';
 
 class FetchFeatureBookCubit extends Cubit<FetchFeatureBookState> {
   FetchFeatureBookCubit(this.homeRepoImpl) : super(GetFeatureBookItit());

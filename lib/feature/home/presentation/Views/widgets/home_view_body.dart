@@ -18,12 +18,12 @@ class HomeBody extends StatelessWidget {
           SliverToBoxAdapter(child: FeatureBookList()),
           SliverToBoxAdapter(
             child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 30),
-              child: Text('Newest Seller Book', style: Styles.textstyle18),
+              padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
+              child: Text('Newest Book', style: Styles.textstyle18),
             ),
           ),
 
-         NewestSellerBookList (),
+          NewestSellerBookList(),
         ],
       ),
     );

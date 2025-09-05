@@ -8,8 +8,8 @@ import 'package:mactabty/core/utils/api_services.dart';
 import 'package:mactabty/feature/home/data/repos/home_repo_implementaion.dart';
 import 'package:mactabty/feature/home/presentation/Views/home_view.dart';
 import 'package:mactabty/feature/home/presentation/Views/details_view.dart';
-import 'package:mactabty/feature/home/presentation/manager/fetch_feature_book_cubit/fetch_feature_cubit.dart';
-import 'package:mactabty/feature/home/presentation/manager/fetch_newset_book_cubit/fetch_newest_book_cubit.dart';
+import 'package:mactabty/feature/home/presentation/manager/fetch_feature_books_cubit/fetch_feature_cubit.dart';
+import 'package:mactabty/feature/home/presentation/manager/fetch_newset_books_cubit/fetch_newest_book_cubit.dart';
 import 'package:mactabty/feature/search/presentaion/views/search_view.dart';
 import 'package:mactabty/feature/splash/presentation/views/splash_view.dart';
 

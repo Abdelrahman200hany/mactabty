@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mactabty/core/utils/Custom_error_message.dart';
 import 'package:mactabty/core/utils/progress_indicator.dart';
 import 'package:mactabty/feature/home/presentation/Views/widgets/custom_book_picture.dart';
-import 'package:mactabty/feature/home/presentation/manager/fetch_feature_book_cubit/fetch_feature_cubit.dart';
-import 'package:mactabty/feature/home/presentation/manager/fetch_feature_book_cubit/fetch_featured_state.dart';
+import 'package:mactabty/feature/home/presentation/manager/fetch_feature_books_cubit/fetch_feature_cubit.dart';
+import 'package:mactabty/feature/home/presentation/manager/fetch_feature_books_cubit/fetch_featured_state.dart';
 
 class FeatureBookList extends StatelessWidget {
   const FeatureBookList({super.key});

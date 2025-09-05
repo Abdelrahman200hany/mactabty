@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mactabty/feature/home/presentation/Views/widgets/newest_seller_item.dart';
-import 'package:mactabty/feature/home/presentation/manager/fetch_newset_book_cubit/fetch_newest_book_cubit.dart';
+import 'package:mactabty/feature/home/presentation/manager/fetch_newset_books_cubit/fetch_newest_book_cubit.dart';
 
 class NewestSellerBookList extends StatelessWidget {
   const NewestSellerBookList({super.key});
@@ -14,7 +14,7 @@ class NewestSellerBookList extends StatelessWidget {
          return SliverList(
           delegate: SliverChildBuilderDelegate(
             (context, index) => Padding(
-              padding: const EdgeInsets.only(left: 30, right: 14, bottom: 8),
+              padding: const EdgeInsets.only(left: 20, right: 14, bottom: 8),
               child: NewestSellerBookItem(books: state.books [index],),
             ),
             childCount: state.books.length,
