@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CustomDetailsAppbar extends StatelessWidget {
   const CustomDetailsAppbar({super.key});
@@ -10,7 +11,9 @@ class CustomDetailsAppbar extends StatelessWidget {
 
       children: [
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+        Get.back();
+          },
           icon: const Icon(Icons.close, color: Colors.white),
         ),
 
