@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mactabty/feature/home/presentation/Views/widgets/Newest_seller_item.dart';
 
 class SearchBookListView extends StatelessWidget {
   const SearchBookListView({super.key});
