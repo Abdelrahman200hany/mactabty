@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mactabty/core/utils/Custom_error_message.dart';
-import 'package:mactabty/core/utils/custom_circular_progress.dart';
+import 'package:mactabty/core/widgets/Custom_error_message.dart';
+import 'package:mactabty/core/widgets/custom_circular_progress.dart';
 import 'package:mactabty/feature/home/presentation/Views/widgets/custom_book_picture.dart';
 import 'package:mactabty/feature/home/presentation/manager/fetch_similar_books_cubit/fetch_similar_book_cubit.dart';
 
