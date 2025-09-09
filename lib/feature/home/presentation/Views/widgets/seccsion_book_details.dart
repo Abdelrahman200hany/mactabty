@@ -19,7 +19,7 @@ class SecssionBooKDetails extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: width * .2,
+            horizontal: width * .3,
           ).copyWith(top: 10),
           child: CustomBookpicture(
             imageurl: book.volumeInfo.imageLinks?.thumbnail ?? '',
@@ -39,6 +39,8 @@ class SecssionBooKDetails extends StatelessWidget {
           child: Opacity(
             opacity: 0.8,
             child: Text(
+              textAlign: TextAlign.center,
+
               book.volumeInfo.publisher ?? 'repo',
               style: Styles.textstyle18.copyWith(fontStyle: FontStyle.italic),
             ),

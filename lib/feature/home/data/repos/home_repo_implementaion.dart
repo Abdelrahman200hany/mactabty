@@ -16,7 +16,7 @@ class HomeRepoImpl implements HomeRepo {
   Future<Either<Failure, List<BookMoldel>>> fetchFeatureBook() async {
     try {
       Response response = await apiServices.get(
-        endpoint: 'volumes?q=subject:Computers&filtering=free-ebooks',
+        endpoint: 'volumes?q=subject:programming&filtering=free-ebooks',
       );
       Map<String, dynamic> data = response.data;
 

@@ -17,8 +17,7 @@ class CustomBookpicture extends StatelessWidget {
         borderRadius: BorderRadius.circular(8),
         child: CachedNetworkImage(
           imageUrl: imageurl,
-          placeholder: (context, url) =>
-              const Center(child: CircularProgressIndicator()),
+      
           errorWidget: (context, url, error) => const Icon(Icons.error),
           fit: BoxFit.fill,
         ),

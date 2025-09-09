@@ -21,7 +21,7 @@ class _DetailsBodyState extends State<DetailsBody> {
   void initState() {
     super.initState();
     BlocProvider.of<FetchSimilarBookCubit>(context).fetchSimilarBook(
-      category: widget.book.volumeInfo.categories?[0] ?? 'computers',
+      category: widget.book.volumeInfo.categories?[0] ?? 'programing',
     );
   }
 
@@ -36,10 +36,10 @@ class _DetailsBodyState extends State<DetailsBody> {
             children: [
               CustomDetailsAppbar(),
               SecssionBooKDetails(width: width, book: widget.book),
-              BookAction(),
-              Expanded(child: const SizedBox(height: 20)),
+              BookAction(book: widget.book),
+              Expanded(child: const SizedBox(height: 10)),
               Padding(
-                padding: const EdgeInsets.only(bottom: 18),
+                padding: const EdgeInsets.only(bottom: 14),
                 child: Align(
                   alignment: Alignment.centerLeft,
 
@@ -47,7 +47,10 @@ class _DetailsBodyState extends State<DetailsBody> {
                 ),
               ),
 
-              SimilarBookList(),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 15),
+                child: SimilarBookList(),
+              ),
             ],
           ),
         ),
