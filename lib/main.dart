@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mactabty/const.dart';
-import 'package:mactabty/core/utils/methods/setup_services_locator.dart';
+import 'package:mactabty/core/methods/setup_services_locator.dart';
 import 'package:mactabty/feature/home/data/repos/home_repo_implementaion.dart';
 import 'package:mactabty/feature/home/presentation/Views/home_view.dart';
 import 'package:mactabty/feature/home/presentation/Views/details_view.dart';
@@ -56,3 +56,7 @@ class Mactabty extends StatelessWidget {
     );
   }
 }
+/*
+
+)
+*/

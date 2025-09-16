@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
-import 'package:mactabty/core/utils/methods/setup_services_locator.dart';
+import 'package:mactabty/core/methods/setup_services_locator.dart';
 import 'package:mactabty/feature/home/data/models/book_moldel/book_moldel.dart';
 import 'package:mactabty/feature/home/data/repos/home_repo_implementaion.dart';
 import 'package:mactabty/feature/home/presentation/Views/widgets/details_view_body.dart';
@@ -21,3 +21,7 @@ class DetailsView extends StatelessWidget {
     );
   }
 }
+/*
+
+
+*/
