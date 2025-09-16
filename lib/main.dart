@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mactabty/const.dart';
 import 'package:mactabty/core/methods/setup_services_locator.dart';
+import 'package:mactabty/core/utils/app_router.dart';
 import 'package:mactabty/feature/home/data/repos/home_repo_implementaion.dart';
-import 'package:mactabty/feature/home/presentation/Views/home_view.dart';
-import 'package:mactabty/feature/home/presentation/Views/details_view.dart';
 import 'package:mactabty/feature/home/presentation/manager/fetch_feature_books_cubit/fetch_feature_cubit.dart';
 import 'package:mactabty/feature/home/presentation/manager/fetch_newset_books_cubit/fetch_newest_book_cubit.dart';
-import 'package:mactabty/feature/search/presentaion/views/search_view.dart';
-import 'package:mactabty/feature/splash/presentation/views/splash_view.dart';
 
 void main() {
   setupServicesLocator();
@@ -36,7 +32,7 @@ class Mactabty extends StatelessWidget {
         ),
       ],
 
-      child: GetMaterialApp(
+      child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
         theme: ThemeData.dark().copyWith(
           scaffoldBackgroundColor: kprimarycolor,
@@ -44,14 +40,8 @@ class Mactabty extends StatelessWidget {
             ThemeData.dark().textTheme,
           ),
         ),
-        getPages: [
-          GetPage(name: HomeView.id, page: () => const HomeView()),
-          GetPage(name: SplashView.id, page: () => const SplashView()),
-          GetPage(name: DetailsView.id, page: () => const DetailsView()),
-          GetPage(name: SearchView.id, page: () => const SearchView()),
-        ],
 
-        initialRoute: SplashView.id,
+        routerConfig: AppRouter.router,
       ),
     );
   }

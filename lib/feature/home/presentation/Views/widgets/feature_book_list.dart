@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+import 'package:mactabty/core/utils/app_router.dart';
 import 'package:mactabty/core/widgets/Custom_error_message.dart';
 import 'package:mactabty/core/widgets/custom_shimmer_book_picture.dart';
-import 'package:mactabty/feature/home/presentation/Views/details_view.dart';
 import 'package:mactabty/feature/home/presentation/Views/widgets/custom_book_picture.dart';
 import 'package:mactabty/feature/home/presentation/manager/fetch_feature_books_cubit/fetch_feature_cubit.dart';
 import 'package:mactabty/feature/home/presentation/manager/fetch_feature_books_cubit/fetch_featured_state.dart';
@@ -30,7 +30,10 @@ class FeatureBookList extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 5),
                   child: CustomBookpicture(
                     onTap: () {
-                       Get.toNamed(DetailsView.id, arguments: state.booklist[index]);
+                      GoRouter.of(context).push(
+                        AppRouter.kdetailsView,
+                        extra: state.booklist[index],
+                      );
                     },
                     imageurl:
                         state

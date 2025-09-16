@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 
 class CustomDetailsAppbar extends StatelessWidget {
   const CustomDetailsAppbar({super.key});
@@ -12,7 +12,7 @@ class CustomDetailsAppbar extends StatelessWidget {
       children: [
         IconButton(
           onPressed: () {
-        Get.back();
+     GoRouter.of(context).pop();
           },
           icon: const Icon(Icons.close, color: Colors.white),
         ),

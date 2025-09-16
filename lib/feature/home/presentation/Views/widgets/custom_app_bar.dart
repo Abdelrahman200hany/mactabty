@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
+import 'package:mactabty/core/utils/app_router.dart';
 import 'package:mactabty/core/utils/assets.dart';
-import 'package:mactabty/feature/search/presentaion/views/search_view.dart';
 
 class CostomAppBar extends StatelessWidget {
   const CostomAppBar({super.key});
@@ -18,7 +18,7 @@ class CostomAppBar extends StatelessWidget {
 
           IconButton(
             onPressed: () {
-              Get.toNamed(SearchView.id);
+           GoRouter.of(context).push(AppRouter.ksearchView);
             },
             icon: Icon(
               FontAwesomeIcons.magnifyingGlass,

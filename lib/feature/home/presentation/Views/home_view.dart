@@ -3,7 +3,6 @@ import 'package:mactabty/feature/home/presentation/Views/widgets/home_view_body.
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
-  static String id = "/HomeView";
 
   @override
   Widget build(BuildContext context) {
