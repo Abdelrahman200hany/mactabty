@@ -10,14 +10,14 @@ class SearchViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30),
+      padding: const EdgeInsets.symmetric(horizontal: 20 ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
 
         children: [
           CustomSearchTextField(),
           Padding(
-            padding: const EdgeInsets.only(bottom: 10),
+            padding: const EdgeInsets.only(bottom: 20),
             child: Text(
               'books',
               style: Styles.textstyle20.copyWith(fontWeight: FontWeight.bold),
