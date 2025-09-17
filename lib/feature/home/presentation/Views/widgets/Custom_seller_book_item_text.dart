@@ -3,8 +3,8 @@ import 'package:mactabty/core/utils/styles.dart';
 import 'package:mactabty/feature/home/data/models/book_moldel/book_moldel.dart';
 import 'package:mactabty/feature/home/presentation/Views/widgets/book_rating.dart';
 
-class NewestSellerBookText extends StatelessWidget {
-  const NewestSellerBookText({super.key, required this.book});
+class CustomSellerBookText extends StatelessWidget {
+  const CustomSellerBookText({super.key, required this.book});
   final BookMoldel book;
 
   @override
@@ -31,7 +31,7 @@ class NewestSellerBookText extends StatelessWidget {
                 style: Styles.textstyle14,
               ),
             ),
-            NewsetSellerBookEvaluate(bookRating: book.volumeInfo.averageRating??0,),
+            SellerBookEvaluate(bookRating: book.volumeInfo.averageRating??0,),
           ],
         ),
       ),
@@ -39,8 +39,8 @@ class NewestSellerBookText extends StatelessWidget {
   }
 }
 
-class NewsetSellerBookEvaluate extends StatelessWidget {
-  const NewsetSellerBookEvaluate({super.key ,   required this .bookRating });
+class SellerBookEvaluate extends StatelessWidget {
+  const SellerBookEvaluate({super.key ,   required this .bookRating });
 final num bookRating;
   @override
   Widget build(BuildContext context) {

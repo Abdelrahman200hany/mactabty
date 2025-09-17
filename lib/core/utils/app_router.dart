@@ -6,6 +6,8 @@ import 'package:mactabty/feature/home/data/repos/home_repo_implementaion.dart';
 import 'package:mactabty/feature/home/presentation/Views/details_view.dart';
 import 'package:mactabty/feature/home/presentation/Views/home_view.dart';
 import 'package:mactabty/feature/home/presentation/manager/fetch_similar_books_cubit/fetch_similar_book_cubit.dart';
+import 'package:mactabty/feature/search/data/repo/search_repo_impt.dart';
+import 'package:mactabty/feature/search/presentaion/view_model/fetch_search_Book/fetch_search_books_cubit.dart';
 import 'package:mactabty/feature/search/presentaion/views/search_view.dart';
 import 'package:mactabty/feature/splash/presentation/views/splash_view.dart';
 
@@ -26,7 +28,10 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: ksearchView,
-        builder: (context, state) => const SearchView(),
+        builder: (context, state) => BlocProvider(
+          create: (context) => FetchSearchBooksCubit(gitit.get<SearchRepoImpt>()),
+          child: const SearchView(),
+        ),
       ),
     ],
   );

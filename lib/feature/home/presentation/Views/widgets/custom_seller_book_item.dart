@@ -4,11 +4,11 @@ import 'package:mactabty/core/utils/app_router.dart';
 import 'package:mactabty/feature/home/data/models/book_moldel/book_moldel.dart';
 
 
-import 'package:mactabty/feature/home/presentation/Views/widgets/newest_seller_item_text.dart';
+import 'package:mactabty/feature/home/presentation/Views/widgets/Custom_seller_book_item_text.dart';
 import 'package:mactabty/feature/home/presentation/Views/widgets/custom_book_picture.dart';
 
-class NewestSellerBookItem extends StatelessWidget {
-  const NewestSellerBookItem({super.key, required this.books});
+class CustomSellerBookItem extends StatelessWidget {
+  const CustomSellerBookItem({super.key, required this.books});
   final BookMoldel books;
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class NewestSellerBookItem extends StatelessWidget {
             CustomBookpicture(
               imageurl: books.volumeInfo.imageLinks?.thumbnail ?? '',
             ),
-            NewestSellerBookText(book: books),
+            CustomSellerBookText(book: books),
           ],
         ),
       ),
