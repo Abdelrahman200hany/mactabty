@@ -31,4 +31,6 @@ class SearchRepoImpt implements SearchRepo {
       return left(ServerFailure(e.toString()));
     }
   }
+
+  
 }

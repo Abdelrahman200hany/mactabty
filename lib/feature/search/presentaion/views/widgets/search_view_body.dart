@@ -23,6 +23,8 @@ class _SearchViewBodyState extends State<SearchViewBody> {
     ).fetchSearchBooks(searchCatory: 'flutter');
   }
 
+  final TextEditingController searchController = TextEditingController();
+  String? searchValue;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -31,9 +33,20 @@ class _SearchViewBodyState extends State<SearchViewBody> {
         crossAxisAlignment: CrossAxisAlignment.start,
 
         children: [
-
-        
-          CustomSearchTextField(),
+          CustomSearchTextField(
+            onPressed: () {
+              BlocProvider.of<FetchSearchBooksCubit>(
+                context,
+              ).fetchSearchBooks(searchCatory: searchValue ?? 'flutter');
+            },
+            searchController: searchController,
+            onSubmitted: (value) {
+              searchValue = value;
+              BlocProvider.of<FetchSearchBooksCubit>(
+                context,
+              ).fetchSearchBooks(searchCatory: searchValue ?? 'flutter');
+            },
+          ),
           Padding(
             padding: const EdgeInsets.only(bottom: 20),
             child: Text(
