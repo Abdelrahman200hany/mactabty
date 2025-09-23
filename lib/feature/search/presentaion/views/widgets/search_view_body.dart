@@ -22,6 +22,12 @@ class _SearchViewBodyState extends State<SearchViewBody> {
       context,
     ).fetchSearchBooks(searchCatory: 'flutter');
   }
+  @override
+
+  void dispose() {
+    searchController.dispose();
+    super.dispose();
+  }
 
   final TextEditingController searchController = TextEditingController();
   String? searchValue;

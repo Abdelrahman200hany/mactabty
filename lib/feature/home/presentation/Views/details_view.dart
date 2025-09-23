@@ -11,7 +11,3 @@ class DetailsView extends StatelessWidget {
     return DetailsBody(book: book);
   }
 }
-/*
-
-
-*/

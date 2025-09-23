@@ -14,7 +14,7 @@ class CustomBookPictureShimmer extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             color: Colors.lightBlueAccent,
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(8),
           ),
         ),
       ),
